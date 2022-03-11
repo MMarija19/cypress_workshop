@@ -1,0 +1,8 @@
+{
+  "defaultCommandTimeout": 20000,
+  "baseUrl": "https://demoqa.com",
+  "watchForFileChanges": true,
+  "numTestKeptInMemory": 1,
+  "viewPortHeight": 1920,
+  "viewPortLength": 1080
+}

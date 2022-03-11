@@ -1,0 +1,20 @@
+{
+  "name": "cypresshomework",
+  "version": "1.0.0",
+  "description": "Cypress workshop homework",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open"
+  },
+  "keywords": [
+    "endtoend",
+    "cypress",
+    "automation",
+    "test"
+  ],
+  "author": "Marija Milosavljevic",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.5.0"
+  }
+}
