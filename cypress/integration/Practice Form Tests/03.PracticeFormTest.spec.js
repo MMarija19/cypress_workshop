@@ -11,6 +11,7 @@ describe("Should test Practice Form", () => {
     homePage.navigateToThePage("Forms", "Practice Form");
   });
   it.only("should fill in student registration form", () => {
+    // da li da budu ovde ili iznad testa?
     const firstname = faker.name.firstName();
     const lastName = faker.name.lastName();
     const email = faker.internet.email();

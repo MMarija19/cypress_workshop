@@ -110,22 +110,25 @@ export default class PracticeFormPage {
     cy.get(".react-datepicker__month-select").select(month);
     this.getYearDropdown().click();
     cy.get(".react-datepicker__year-select").select(year);
-    let shouldStop = false;
-    cy.get(".react-datepicker__day.react-datepicker__day").each((element) => {
-      cy.then(() => {
-        if (shouldStop) {
-          return;
-        }
-        cy.wrap(element)
-          .invoke("attr", "aria-label")
-          .then((atribut) => {
-            if (atribut.includes(`${month} ${day}`)) {
-              cy.wrap(element).click();
-              shouldStop = true;
-            }
-          });
-      });
-    });
+    cy.get(`div[aria-label*='${month}']`).contains(`${day}`).click();
+
+    // da li treba da se koristi ikada ili da se maksimalno zaobilazi???
+    // let shouldStop = false;
+    // cy.get(".react-datepicker__day.react-datepicker__day").each((element) => {
+    //   cy.then(() => {
+    //     if (shouldStop) {
+    //       return;
+    //     }
+    //     cy.wrap(element)
+    //       .invoke("attr", "aria-label")
+    //       .then((atribut) => {
+    //         if (atribut.includes(`${month} ${day}`)) {
+    //           cy.wrap(element).click();
+    //           shouldStop = true;
+    //         }
+    //       });
+    //   });
+    // });
   }
 
   checkRandomGender() {
